@@ -1,0 +1,5 @@
+A Log Analytics workspace was created to collect, store, and analyze telemetry from the Azure VM. 
+
+Purpose: 
+
+store collected logs, enable KQL queries, centralize security event data.

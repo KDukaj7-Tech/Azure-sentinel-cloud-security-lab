@@ -1,0 +1,3 @@
+A Heartbeat table query was used to confirm the agent was communicating with Log Analytics. Sample KQL.
+
+Heartbeat | take 10. Purpose confirm agent connectivity and telemetry collection.

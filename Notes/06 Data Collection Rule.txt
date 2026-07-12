@@ -1,0 +1,5 @@
+A data collection rule (DCR) has been configured to define which logs are collected from the VM and sent to Log Analytics. 
+
+Purpose:
+
+define collected logs, forward telemetry, standardize log collection.

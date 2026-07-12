@@ -1,0 +1,11 @@
+What is a resource group? 
+
+A resource group is a logical container in azure that holds related resources. It helps organise manage and monitor things that belong to the same project or app. Keeping related resources in one group also makes them easier to manage and delete together when no longer needed. 
+
+Why did i create one? 
+
+I created this resource group to keep all the azure resources for my cloud sec lab organised in one place. Using a resources group will make it easy to manage, monitor and remove all of the project resources if they are no longer needed. 
+
+What will eventually go in it? 
+
+Eventually this group will hold the virtual machines, networking and monitoring tools. 

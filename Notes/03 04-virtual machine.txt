@@ -1,0 +1,9 @@
+Virtual Machine.
+
+ A Windows virtual machine was deployed in Microsoft Azure to simulate an enterprise endpoint for security monitoring and log analysis.
+
+ The VM generated Windows security event logs, allowing successful logon events (Event ID4624) to be collected and analyzed using Kusto Query Language. 
+
+Purpose:
+
+ to simulate an enterprise Windows endpoint, generate security logs, send telemetry to Azure Monitor, and support KQL investigations.

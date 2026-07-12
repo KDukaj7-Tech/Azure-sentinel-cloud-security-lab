@@ -1,0 +1,11 @@
+What is a virtual network?
+
+A virtual network is a private network in azure that lets your cloud resources communicate securely.
+
+Why did I create one?
+
+I create this virtual network to give my lab a private network boundary. So future VMs can connect securely and predictably.
+
+What will connect to it?
+
+Virtual machines like a windows server or client VM will connect to this network. Later we can add subnets or security rules as the labs grows.

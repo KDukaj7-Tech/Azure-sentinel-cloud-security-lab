@@ -1,0 +1,5 @@
+Sample KQL.
+ Event | where EventLog equals equals Security, | where EventID equals equals 4624, | where TimeGenerated greater than ago 24 hours, | project TimeGenerated, Computer, EventID, RenderedDescription, | take 10. 
+
+Purpose:
+ identify successful logons and examine authentication activity.

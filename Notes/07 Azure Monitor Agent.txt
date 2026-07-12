@@ -1,0 +1,5 @@
+The Azure Monitor Agent was installed on the VM to collect Windows security event logs and send them to Log Analytics. 
+
+Purpose 
+
+collect Windows event logs, securely send telemetry, enable monitoring.

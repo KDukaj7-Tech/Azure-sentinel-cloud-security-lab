@@ -1,0 +1,18 @@
+Deploy a windows server virtual machine in Microsoft azure
+
+Configure secure remote desktop rdp access
+
+Resources created:
+resource group
+virtual network
+virtual machine
+Public IP address
+network interface NIC
+NSG Network security group
+Windows server virtual machine
+
+Challenges encountered:
+the selected vm size was unavailable in the original azure region north Europe. I had to deploy the vm to a different azure region. I couldn't connect via rdp until I attached a public IP address. RDP was blocked until a nsg rule that allowed 3389. Windows initially blocked the downloaded rdp file with a security warning. I chose to connect anyway after unblocking the file via properties then proceeded anyway.
+
+Outcome:
+Successfully deployed and then accessed the vm via rdp.
