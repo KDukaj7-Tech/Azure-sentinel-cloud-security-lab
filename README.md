@@ -85,7 +85,8 @@ The following diagram illustrates the flow of security telemetry throughout the 
 
 I began by creating a dedicated Azure Resource Group to contain every resource used throughout the project. Keeping all resources within a single Resource Group simplified management, deployment and eventual clean-up.
 
-**[Insert Screenshot 01 – Resource Group Created]**
+<img width="1919" height="912" alt="01 Resource Group Created" src="https://github.com/user-attachments/assets/9b92357e-92a7-48b1-b4c9-3056f7b9bbdd" />
+
 
 ---
 
@@ -93,7 +94,8 @@ I began by creating a dedicated Azure Resource Group to contain every resource u
 
 Next, I deployed a Virtual Network (VNet) to provide secure networking for the Windows Virtual Machine. This isolated the environment while allowing Remote Desktop access for administration.
 
-**[Insert Screenshot 02 – Virtual Network Created]**
+<img width="1919" height="914" alt="02-Virtual network created" src="https://github.com/user-attachments/assets/b438c0a1-c7cf-4d35-ae09-a3020d85e937" />
+
 
 ---
 
@@ -111,9 +113,11 @@ Tasks completed included:
 * Windows configuration
 * Event generation
 
-**[Insert Screenshot 03 – VM Networking]**
+<img width="1917" height="910" alt="03 VM Networking" src="https://github.com/user-attachments/assets/97edd84e-3dd0-4430-a115-215c0420986f" />
 
-**[Insert Screenshot 04 – Virtual Machine Overview]**
+
+<img width="1919" height="909" alt="04 VM overview" src="https://github.com/user-attachments/assets/530fe057-dd3c-4d44-a28e-cd50bc3c4948" />
+
 
 ---
 
@@ -125,7 +129,8 @@ A Log Analytics Workspace was created to act as the central repository for all t
 
 This became the foundation for querying Windows Security Events using KQL.
 
-**[Insert Screenshot 05 – Log Analytics Workspace]**
+<img width="1917" height="916" alt="05-Log analytics workspace overview" src="https://github.com/user-attachments/assets/bbd4d09d-cd55-4e1b-967b-5684f73385cd" />
+
 
 ---
 
@@ -135,7 +140,8 @@ A Data Collection Rule (DCR) was configured to determine exactly which Windows E
 
 This ensured only the required telemetry was ingested.
 
-**[Insert Screenshot 06 – Data Collection Rule]**
+<img width="1917" height="913" alt="06-Data collection rule overview" src="https://github.com/user-attachments/assets/b5deb074-374d-45c8-8eef-1f913bbd3a37" />
+
 
 ---
 
@@ -145,7 +151,8 @@ The Azure Monitor Agent was installed on the Windows Virtual Machine.
 
 After installation, connectivity was verified before continuing with the investigation phase.
 
-**[Insert Screenshot 07 – Azure Monitor Agent]**
+<img width="1919" height="912" alt="07-Azure monitor agent extension" src="https://github.com/user-attachments/assets/6d591825-ba48-41d3-b65d-df8262146001" />
+
 
 ---
 
@@ -162,7 +169,8 @@ Heartbeat
 
 The returned results confirmed successful agent communication.
 
-**[Insert Screenshot 08 – Heartbeat Query Results]**
+<img width="1919" height="911" alt="08-Heartbeat query results" src="https://github.com/user-attachments/assets/fd539b29-4c0b-47f9-b674-d1383f04cde3" />
+
 
 ---
 
@@ -182,7 +190,8 @@ Using this query, I reviewed successful authentication events together with thei
 
 This helped distinguish normal Windows activity from potentially suspicious authentication behaviour.
 
-**[Insert Screenshot 09 – Event ID 4624 Query Results]**
+<img width="1919" height="912" alt="09-Security event 4624 query result" src="https://github.com/user-attachments/assets/3a4a6e15-adc4-463b-8611-9bba4aeec7b1" />
+
 
 ---
 
@@ -204,7 +213,8 @@ The **RenderedDescription** field provided useful information including:
 
 The majority of observed events originated from expected Windows services, demonstrating how important it is to understand normal operating system behaviour before investigating potential threats.
 
-**[Insert Screenshot 10 – Event Investigation]**
+<img width="1919" height="914" alt="10-Event investigation-rendered description" src="https://github.com/user-attachments/assets/ad46ce07-8791-4a52-b29a-88d43b530378" />
+
 
 ---
 
@@ -230,7 +240,8 @@ Configuration included:
 * Event Grouping
 * Custom KQL Query
 
-**[Insert Screenshot 11 – Successful Logon Analytics Rule]**
+<img width="1917" height="912" alt="012-Sentinel analytics rule details" src="https://github.com/user-attachments/assets/e10e3644-c034-403b-b9ab-fd1719b90eb4" />
+
 
 ---
 
@@ -242,7 +253,8 @@ This rule counted failed authentication attempts over a defined time window befo
 
 Building this rule required troubleshooting KQL syntax and adapting the query to match the event schema available within the lab.
 
-**[Insert Screenshot 12 – Failed Logon Analytics Rule]**
+<img width="1919" height="910" alt="014-Sentinel rule list and details" src="https://github.com/user-attachments/assets/bd106ea3-493f-441d-b5e8-98fb1adb0073" />
+
 
 ---
 
@@ -254,7 +266,10 @@ Once the threshold was exceeded, Microsoft Sentinel successfully generated an al
 
 This validated the complete monitoring pipeline from Windows Event generation through Azure Monitor and Log Analytics into Microsoft Sentinel.
 
-**[Insert Screenshot 13 – Sentinel Alert]**
+<img width="1919" height="911" alt="013-Sentinel incident generated" src="https://github.com/user-attachments/assets/7c8f417d-e7d7-46bb-8f0e-fdcc3b2277f9" />
+<img width="1917" height="908" alt="015-sentinel failed logon alert" src="https://github.com/user-attachments/assets/4bc5aa01-af28-426a-971a-b27d72847bf8" />
+
+
 
 ---
 
